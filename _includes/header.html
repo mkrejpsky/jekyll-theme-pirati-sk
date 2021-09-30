@@ -142,27 +142,26 @@
   </ui-app>
 </div>
 <script>
-
 function replaceHTMLEnts() {
   // Get all <p> elements in the document
   var x = document.querySelectorAll("p"); 
   var i;
   for (i = 0; i < x.length; i++) {
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;br&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&amp;/g, "&");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;(a|A) (.*)&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;br&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;BR&gt;/g, "");
+    x[i].innerHTML=htmlDecode(x[i].innerHTML);
+ 
   } 
   x = document.querySelectorAll("a"); 
   for (i = 0; i < x.length; i++) {
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;br&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&amp;/g, "&");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;(a|A) (.*)&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;br&gt;/g, "");
-    x[i].innerHTML=x[i].innerHTML.replace(/&lt;BR&gt;/g, "");
+    x[i].innerHTML=htmlDecode(x[i].innerHTML);
+ 
   } 
 }
-	
+  
+function htmlDecode(input){
+  var e = document.createElement('div');
+  e.innerHTML = input;
+  return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}
+  
 replaceHTMLEnts();
 </script>
