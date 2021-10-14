@@ -6,7 +6,7 @@ gem "jekyll", "~> 3.7.3"
 gem "jekyll-feed"
 gem "jekyll-sitemap"
 gem "jekyll-paginate"
-gem "jekyll-assets", "3.0.11", group: :jekyll_plugins
+gem "jekyll-assets"
 gem 'jekyll-environment-variables'
 
 gem "json",'~> 2.3.1' # For gem building
