@@ -28,8 +28,16 @@
           <div class="mb-4">
             {% include social-icon-group.html class="space-x-2 text-white pb-4" %}
             {% if site.organization.email %}
+            <div class="mb-2">
               {% capture href %}mailto:{{ site.organization.email }}{% endcapture %}
               {% include contact-line.html href=href icon="ico--envelope" caption="Dejte nám vědět" %}
+            </div>
+            {% endif %}
+            {% if site.github %}
+            <div class="mb-2">
+              {% capture href %}{{ site.github.url }}edit/{{ site.github.branch }}/{{ page.path }}{% endcapture %}
+              {% include contact-line.html href=href icon="ico--pencil" caption="Navrhni úpravu" %}
+            </div>
             {% endif %}
           </div>
           <div class="flex flex-col md:flex-row lg:flex-col lg:items-end space-y-2 md:space-y-0 md:space-x-2 lg:space-x-0 lg:space-y-2">
@@ -80,8 +88,14 @@
           <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {% if site.data.menu.contact %}
               {% for contact in site.data.menu.contact %}
-                {% assign person = site.people | where_exp:"item","item.uid contains contact.id" | first %}
-                {% include people/profile-badge.html item=person description=contact.position %}
+                {% if contact.id %}
+                  {% assign person = site.people | where_exp:"item","item.uid contains contact.id" | first %}
+                  {% assign description = contact.position %}
+                {% else %}
+                  {% assign person = site.people | where_exp:"item","item.uid contains contact" | first %}
+                  {% assign description = person.teamDescription['contact'] %}
+                {% endif %}
+                {% include people/profile-badge.html item=person description=description %}
               {% endfor %}
             {% else %}
               {% assign contactPerson = site.people | where_exp: "item","item.uid contains site.organization.contactUid" | first %}
@@ -95,7 +109,11 @@
           </div>
         </div>
       </section>
-      <section class="bg-black py-4 lg:py-12">
+    </div>
+  </ui-app>
+</footer>
+
+
  
 <!-- Styles -->
 <link rel="stylesheet" href="https://www.piratiastarostove.cz/static/elections2021/css/styleguide.min.css">
@@ -108,12 +126,10 @@ sup {
  
 
 
-
 <div class=" bg-white">
-   <div class="row bg-grey-700">
-    
+   
    <div class="row">
-	<section id="jakpomoci" class="lg:flex">
+  <section id="jakpomoci" class="lg:flex">
     <div class="w-full">
       <div class="cta-card cta-news px-8 py-8 bg-acidgreen text-black">
         <p class="font-alt text-4xl">CHCI VĚDĚT VÍCE</p>
@@ -132,7 +148,7 @@ sup {
           <div class="checkbox form-field__control cta-cbox h-6">
             <input type="checkbox" name="confirmed" id="confirmed_bottom" required="">
             <label for="confirmed_bottom" style="color: #000000"> Souhlasím se <a href="https://www.piratiastarostove.cz/zasady-ochrany-osobnich-udaju/" class="underline" target="_blank">zásadami ochrany osobních údajů</a> a zasíláním novinek</label>
-              </div>
+          </div>
         </form>
       </div>
     </div>
@@ -143,7 +159,7 @@ sup {
         
         <a href="https://nalodeni.pirati.cz/kampan2021/" class="btn btn--icon text-lg w-full cta-button my-2">
           <div class="btn__body-wrap">
-            <div class="btn__body py-4 leading-4 w-full">Chci se přidat k Pirátům</div>
+            <div class="btn__body py-4 leading-4 w-full">Chci pomáhat v kampani</div>
             <div class="btn__icon px-4 bg-grey-800 border-grey-500">
               <i class="ico--chevron-right"></i>
             </div>
@@ -284,10 +300,10 @@ sup {
 
     <div class="w-full">
       <div class="cta-card cta-support px-8 py-8 bg-white">
-        <p class="font-alt text-4xl w-1 text-black">CHCI PODPOŘIT</p>
-        <a href="https://dary.pirati.cz/projekty-kampane/" class="btn btn--icon text-lg w-full cta-btn my-2">
+        <p class="font-alt text-4xl w-1">CHCI PODPOŘIT</p>
+        <a href="https://dary.pirati.cz/projekty-kampane/piratiastarostove/" class="btn btn--icon text-lg w-full cta-btn my-2">
           <div class="btn__body-wrap">
-            <div class="btn__body py-4 leading-4 w-full">Chci darovat Pirátům</div>
+            <div class="btn__body py-4 leading-4 w-full">Chci darovat na kampaň</div>
             <div class="btn__icon px-4 bg-grey-800 border-grey-500">
               <i class="ico--chevron-right"></i>
             </div>
@@ -297,18 +313,11 @@ sup {
     </div>
   </section>
   </div>
- 
-   </div>
-</div>
-<div class="row">
+ <div class="row">
  <section class="bg-black py-4 lg:py-12">
   <div class="medium-12 large-7 text-white" ><center>
 	<a href="https://www.pirati.cz/o-nas/ochrana-osobnich-udaju/">Zásady zpracování osobních údajů a informace o využití cookies</a></center>
   </div>
   </section>
 </div>
-
-      </section>
-    </div>
-  </ui-app>
-</footer>
+   </div>
