@@ -6,11 +6,11 @@ gem "jekyll", "~> 3.7.3"
 gem "jekyll-feed"
 gem "jekyll-sitemap"
 gem "jekyll-paginate"
-gem "jekyll-assets"
+gem "jekyll-assets", "3.0.11", group: :jekyll_plugins
 gem 'jekyll-environment-variables'
 
-gem "json",'~> 2.3.1' # For gem building
-gem 'sprockets', '~> 4.0.0.beta'
+gem "json",'~> 2.3.0' # For gem building
+gem 'sprockets', "~> 3.7"
 gem 'uglifier', '~> 4.0.0'
 gem "mini_magick"
 gem "autoprefixer-rails"
