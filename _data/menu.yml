@@ -1,12 +1,12 @@
 top:
-  - link: "pirati.cz"
-    url:  "https://www.pirati.cz"
+  - link: "slovenskipirati.sk"
+    url:  "https://www.slovenskipirati.sk"
     icon: "ico--home"
-  - link: "piratskyobchod.cz"
-    url:  "https://piratskyobchod.cz"
+  - link: "piratskyobchod.sk"
+    url:  "https://piratskyobchod.sk"
     icon: "ico--cart"
-  - link: "Pirátské listy"
-    url:  "http://www.piratskelisty.cz"
+  - link: "Pirátske listy"
+    url:  "http://www.piratskelisty.sk"
     icon: "ico--newspaper"
 
 main:
@@ -16,37 +16,37 @@ main:
   - link: /aktuality/
     name: Aktuality
     match: aktuality
-  - link: /lide/
+  - link: /ludia/
     name: O nás
-    match: lide, regiony
+    match: ludia, regiony
     submenu:
-      - link: /lide/
-        name: Naši lidé
-        match: lide
+      - link: /ludia/
+        name: Naši ľudia 
+        match: ludia
       - link: /regiony/
-        name: Místní sdružení
+        name: Miestne združenia 
         match: regiony
       - link: /regiony/index2.html
-        name: Jiný rozcestník
+        name: Iný rázcestník 
         match: index2
-  - link: /komunalni-volby/praha2018
-    name: Komunální volby
-    match: komunalni-volby
+  - link: /komunalne-volby/blava2022
+    name: Komunálne voľby 
+    match: komunalne-volby
     submenu:
-      - link: /komunalni-volby/praha2018/
-        name: Program na radnici
+      - link: /komunalne-volby/blava2022/
+        name: Program Bratislava
         match: radnice
-      - link: /komunalni-volby/senat/
-        name: Senát
-        match: senat
-      - link: /komunalni-volby/mapa-zameru/
-        name: Mapa záměrů
-        match: mapa-zameru
-  - link: /pripoj-se/
-    name: Připoj se
-    match: pripoj-se
+      - link: /komunalne-volby/kosice2022/
+        name: Program Košice
+        match: radnice
+      - link: /komunalne-volby/poprad2022/
+        name: Program Poprad
+        match: radnice
+  - link: /pripoj-sa/
+    name: Pripoj sa 
+    match: pripoj-sa
   - link: /piratske-centrum/
-    name: Piratské centrum
+    name: Pirátske centrum
     match: piratske-centrum
   - link: /kontakt/
     name: Kontakt
@@ -56,17 +56,17 @@ main:
 
 bottom:
   - class: small-12 medium-4
-    title: Připoj se
+    title: Pripoj sa
     links:
-      - link: /pripoj-se/
-        name: Dej nám vědět
+      - link: /pripoj-sa/
+        name: Daj nám vedieť 
   - class: small-12 medium-4
     title: Makáme
     links:
-      - link: /lide/
-        name: Lidé
-      - link: /komunalni-volby/
-        name: Volby
+      - link: /ludia/
+        name: Ľudia 
+      - link: /komunalne-volby/
+        name: Voľby 
       - link: /aktuality/
         name: Aktuality
 

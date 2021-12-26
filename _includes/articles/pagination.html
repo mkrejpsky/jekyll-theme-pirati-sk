@@ -1,7 +1,7 @@
 <div class="pagination-container" role="navigation" aria-label="Pagination">
   <nav class="pagination space-x-1">
     {% if include.paginator.page != 1 %}
-      {% include buttons/icon.html href=include.paginator.previous_page_path cta="Předchozí" icon="ico--chevron-left" class="btn--grey-125 btn--hoveractive btn--to-black btn--condensed btn--inverted-icon" aria_label="Předchozí stránka" %}
+      {% include buttons/icon.html href=include.paginator.previous_page_path cta="Predchádzajúci" icon="ico--chevron-left" class="btn--grey-125 btn--hoveractive btn--to-black btn--condensed btn--inverted-icon" aria_label="Predchádzajúca stránka" %}
     {% endif %}
 
     {% for page in (1..include.paginator.total_pages) %}
@@ -19,7 +19,7 @@
     {% endfor %}
 
     {% if include.paginator.page != include.paginator.total_pages %}
-      {% include buttons/icon.html href=include.paginator.next_page_path cta="Další" icon="ico--chevron-right" class="btn--grey-125 btn--hoveractive btn--to-black btn--condensed" aria_label="Další stránka" %}
+      {% include buttons/icon.html href=include.paginator.next_page_path cta="Ďalšia" icon="ico--chevron-right" class="btn--grey-125 btn--hoveractive btn--to-black btn--condensed" aria_label="Ďalšia stránka" %}
     {% endif %}
   </nav>
 </div>

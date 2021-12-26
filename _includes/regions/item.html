@@ -8,12 +8,12 @@
         <a href="{{include.link}}"> {{ include.name}} </a>
     </h3>
     <ul>
-      <li>Působnost: {{ include.area }}</li>
+      <li>Pôsobnosť : {{ include.area }}</li>
       {% assign person = site.people | where_exp:"item","item.uid contains include.president" | first %}
       {% if person %}
-        <li>Předseda: <a href={{person.url}}> {{person.name}}</a> </li>
+        <li>Predseda: <a href={{person.url}}> {{person.name}}</a> </li>
       {% else %}
-        <li>Předseda: {{include.president}} </li>
+        <li>Predseda: {{include.president}} </li>
       {% endif %}
       {% if include.fb %}
         <li>

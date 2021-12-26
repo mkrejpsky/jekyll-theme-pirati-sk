@@ -4,7 +4,7 @@
       <ui-calendar-renderer
         :events="events"
         :on-show-more="onShowMore"
-        :has-more="hasMore" :name="'{{ include.calendarTitle | default: 'Kalendář' }}'"
+        :has-more="hasMore" :name="'{{ include.calendarTitle | default: 'Kalendár' }}'"
         {% if include.hideBanner %}:show-banner="false"{% endif %}
       ></ui-calendar-renderer>
     </ui-calendar-google-provider>
@@ -13,7 +13,7 @@
       <iframe src="{{ include.calendarPage }}" style="border-width:0; width: 100%; height: 410px; border: 0; overflow: hidden;"></iframe>
       <p class="mt-4">
         <a class="btn btn--orange-200 btn--hoveractive" href="{{ include.calendarPage | relative_url }}">
-          <span class="btn__body">Zobrazit všechny akce</span>
+          <span class="btn__body">Zobraziť všetky akcie</span>
         </a>
       </p>
     {% endif %}

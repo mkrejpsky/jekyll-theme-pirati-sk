@@ -1,7 +1,7 @@
 
 {% if page.board %}
   <div class="content-block">
-  <h2>{{ page.boardName | default: "Předsednictvo" }}</h2>
+  <h2>{{ page.boardName | default: "Predsedníctvo" }}</h2>
   <ul class="unordered-list unordered-list--linked">
     {% for chair in page.board %}
       {% if chair.uid %}
@@ -17,6 +17,6 @@
     {% endfor %}
   </ul>
   {% if page.boardTurn %}
-      <p>Konec mandátu: <a href="{{ page.boardTurn.electionUrl }}" style="text-decoration:underline"> {{ page.boardTurn.endDate }} </a></p>
+      <p>Koniec mandátu: <a href="{{ page.boardTurn.electionUrl }}" style="text-decoration:underline"> {{ page.boardTurn.endDate }} </a></p>
   {% endif %}
 {% endif %}

@@ -7,8 +7,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Pirátská strana | Šablona stránek
-email: to@pirati.cz
+title: Pirátská strana Slovensko | Šablona stránek
+email: to@pirati.sk
 description: > # this means to ignore newlines until "baseurl:"
   Zde doplně popis webu
 url: "https://pirati.cz" # the base hostname & protocol for your site
@@ -17,7 +17,7 @@ url: "https://pirati.cz" # the base hostname & protocol for your site
 markdown: kramdown
 
 # Styleguide base URL, see the list of available options here: https://styleguide.pir-test.eu/
-styleguide_base_url: https://styleguide.pir-test.eu/1.x.x
+# styleguide_base_url: https://styleguide.pir-test.eu/1.x.x
 
 plugins:
   - jekyll-paginate
@@ -57,11 +57,11 @@ permalink: /aktuality/:title.html
 collections:
   people:
     output: true
-    permalink: /lide/:path/
+    permalink: /ludia/:path/
 
   program:
     output: true
-    permalink: /komunalni-volby/program/:path/
+    permalink: /komunalne-volby/program/:path/
 
   # Sole purpose is to create candidate lists in separate files.
   candidatelists:
@@ -105,8 +105,8 @@ organization:
   redmineLink: https://redmine.pirati.cz/projects
   dataBoxId: b2i4r6j
   transparentAccount: 2100048174/2010
-  donateLink: https://dary.pirati.cz/podpor-kraj/pardubicky/
-  onboardingLink: https://nalodeni.pirati.cz
+  donateLink: https://dary.pirati.sk/
+  onboardingLink: https://nalodeni.pirati.sk
 
 # Items listed in contact summary table
 contactSummaryItems:
@@ -124,34 +124,23 @@ contactSummaryItems:
 
 calendar:
   # To enable a nicer calendar, make sure you start jekyll with GOOGLE_CALENDAR_APIKEY=[apikey] bundle exec jekyll serve
-  title: Celostátní kalendář
+  title: Celoštátny kalendár 
   id: nk73m1m89vhf5g2vojp6tnqe58@group.calendar.google.com
   page: https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=cs&amp;bgcolor=%23FFFFFF&amp;src=nk73m1m89vhf5g2vojp6tnqe58%40group.calendar.google.com&ctz=Europe%2FPrague&amp;color=%232952A3
 
 facebook:
   loadSDK: true
-  profilePage: https://www.facebook.com/ceska.piratska.strana/
-  profilePageName: Nějaký název FB profilu
+  profilePage: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiMhILky4H1AhUyi_0HHSABCoIQFnoECAIQAQ&url=https%3A%2F%2Fwww.facebook.com%2Fpiratskastrana&usg=AOvVaw2Ouy6YukNvDLBb8jZjw_LO
+  profilePageName: Facebook profil
   appId: 1526197851008996
 
 twitter:
   loadSDK: true
-  profile: PiratskaStrana
+  profile: SlovenskiPirati
 
-youtube:
-  channel: UC_zxYLGrkmrYazYt0MzyVlA
 
 instagram:
-  profilePage: https://www.instagram.com/pirati.cz/
-
-gplus:
-  profilePage: https://plus.google.com/u/0/+piratskastrana
-
-flicker:
-  profilePage: https://www.flickr.com/photos/pirati/
-
-forum:
-  page: https://forum.pirati.cz/
+  profilePage: https://www.instagram.com/slovenskipirati/
 
 github:
   url: https://github.com/mkrejpsky/jekyll-theme-pirati-sk/

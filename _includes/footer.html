@@ -5,8 +5,8 @@
         <section class="footer__brand">
           <img src="{{ site.styleguide_base_url }}/images/logo-full-white.svg" alt="Pirátská strana" class="w-32 md:w-40 pb-6" />
           <p class="para hidden md:block md:mb-4 lg:mb-0 text-grey-200">
-            Piráti, {{ site.time | date: '%Y' }}. Všechna práva vyhlazena.
-            Sdílejte a nechte ostatní sdílet za stejných podmínek.
+            Piráti, {{ site.time | date: '%Y' }}. Všetky práva vyhladená.
+             Zdieľajte a nechajte ostatných zdieľať za rovnakých podmienok. 
           </p>
         </section>
         <section class="footer__main-links bg-grey-700 text-white lg:grid grid-cols-3 gap-4">
@@ -30,7 +30,7 @@
             {% if site.organization.email %}
             <div class="mb-2">
               {% capture href %}mailto:{{ site.organization.email }}{% endcapture %}
-              {% include contact-line.html href=href icon="ico--envelope" caption="Dejte nám vědět" %}
+              {% include contact-line.html href=href icon="ico--envelope" caption="Dajte nám vedieť" %}
             </div>
             {% endif %}
             {% if site.github %}
@@ -43,7 +43,7 @@
           <div class="flex flex-col md:flex-row lg:flex-col lg:items-end space-y-2 md:space-y-0 md:space-x-2 lg:space-x-0 lg:space-y-2">
             <a href="{{ site.organization.donateLink | default: 'https://dary.pirati.cz' }}" rel="noopener noreferrer" target="_blank" class="btn btn--icon btn--cyan-200 btn--hoveractive text-lg btn--fullwidth sm:btn--autowidth">
               <div class="btn__body-wrap">
-                <div class="btn__body ">Přispěj</div>
+                <div class="btn__body ">Prispej</div>
                 <div class="btn__icon ">
                   <i class="ico--pig"></i>
                 </div>
@@ -69,13 +69,13 @@
             <ui-footer-collapsible label="Otevřenost" labelClass="lg:w-1/4" wrapperClass="flex flex-col lg:flex-row lg:space-x-4 lg:items-center py-4 lg:py-8 border-t border-grey-400 lg:border-t-0" slotWrapperclass="lg:w-2/4">
               <ul class="lg:w-full lg:pr-8 grid grid-cols-1 lg:grid-cols-3 lg:gap-4 items-center mt-6 space-y-2 lg:mt-0 lg:space-y-0 text-grey-200">
                 <li class="w-full">
-                  <a href="https://ucet.pirati.cz" rel="noreferrer noopener" target="_blank">Transparentní účet</a>
+                  <a href="https://ucet.pirati.cz" rel="noreferrer noopener" target="_blank">Transparentný účet</a>
                 </li>
                 <li class="w-full">
-                  <a href="https://smlouvy.pirati.cz" rel="noreferrer noopener" target="_blank">Registr smluv</a>
+                  <a href="https://smlouvy.pirati.cz" rel="noreferrer noopener" target="_blank">Register zmlúv</a>
                 </li>
                 <li class="w-full">
-                  <a href="https://wiki.pirati.cz/fo/otevrene_ucetnictvi" rel="noreferrer noopener" target="_blank">Otevřené účetnictví</a>
+                  <a href="https://wiki.pirati.cz/fo/otevrene_ucetnictvi" rel="noreferrer noopener" target="_blank">Otvorené účtovníctvo</a>
                 </li>
               </ul>
             </ui-footer-collapsible>
@@ -131,7 +131,7 @@ sup {
  <div class="row">
  <section class="bg-black py-4 lg:py-12">
   <div class="medium-12 large-7 text-white" ><center>
-	<a href="https://www.pirati.cz/o-nas/ochrana-osobnich-udaju/">Zásady zpracování osobních údajů a informace o využití cookies</a></center>
+	<a href="https://www.pirati.cz/o-nas/ochrana-osobnich-udaju/">Zásady spracovania osobných údajov a informácie o využití cookies </a></center>
   </div>
   </section>
 </div>
