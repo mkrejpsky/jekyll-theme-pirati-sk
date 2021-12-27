@@ -78,6 +78,13 @@
       <nav class="subnav">
         <div class="container container--wide">
           <div class="flex">
+            <button @click="toggleView('regions')" class="btn btn--condensed btn--grey-500 btn--hoveractive btn--to-white text-sm mr-2" :class="{'btn--activated': isCurrentView('regions')}">
+              <div class="btn__body">
+                <span>{{ site.organization.name }}</span>
+                <i class="ico--chevron-down ml-4"></i>
+              </div>
+            </button>
+
             <button @click="toggleView('calendar');replaceHTMLEnts();" class="btn btn--inline-icon btn--condensed btn--hoveractive btn--grey-500 btn--to-orange-300 text-sm" :class="{'btn--activated': isCurrentView('calendar')}">
               <div class="btn__body">
                 <i class="btn__inline-icon ico--calendar mr-0 md:mr-2 text-orange-300"></i>

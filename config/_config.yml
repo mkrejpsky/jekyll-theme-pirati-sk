@@ -7,7 +7,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Pirátská strana Slovensko | Šablona stránek
+title: Pirátska strana Slovensko | Šablona
 email: to@pirati.sk
 description: > # this means to ignore newlines until "baseurl:"
   Zde doplně popis webu
@@ -18,7 +18,7 @@ markdown: kramdown
 
 # Styleguide base URL, see the list of available options here: https://styleguide.pir-test.eu/
 # styleguide_base_url: https://styleguide.pir-test.eu/1.x.x
-
+styleguide_base_url: /assets/
 plugins:
   - jekyll-paginate
   - jekyll-feed
@@ -93,7 +93,7 @@ defaults:   # defaults values for collection scope
 emptyArray: []
 
 organization:
-  name: Pirátská strana # Jmeno skupiny používající web - př Pirátská strana
+  name: Pirátska strana Slovensko # Jmeno skupiny používající web - př Pirátská strana
   shortName: Název skupiny # Kratší název skupiny
   email: example@pirati.cz
   phone: +420 777 123 456 789
@@ -168,4 +168,5 @@ assets:
     - assets/fonts
     - assets/video
     - assets/img
+    - assets/js
     - _sass
